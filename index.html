@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,16 +8,22 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       padding: 20px;
     }
 
     h1 {
-      color: #333;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 25px;
       background-color: #007bff;
       color: white;
       border: none;
@@ -31,27 +37,35 @@
     }
 
     .wanted {
-      display: none; /* Nakatago ang images at description by default */
-      margin-top: 20px;
+      display: none; /* Hidden by default */
+      margin-top: 30px;
     }
 
     .wanted img {
       width: 200px;
       height: auto;
       border: 2px solid #ddd;
-      border-radius: 5px;
+      border-radius: 10px;
       margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .description {
       font-weight: bold;
-      color: #555;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <h1>Normies Squad</h1>
-  <p>Click the button below to view the wanted list!</p>
+  <p>Click the button below to view the wanted list of Normies Squad!</p>
   <button onclick="showWantedList()">View Wanted List</button>
 
   <!-- Wanted List -->
@@ -66,10 +80,19 @@
     </div>
   </div>
 
+  <footer>
+    © 2025 Normies Squad. All rights reserved.
+  </footer>
+
   <script>
     function showWantedList() {
-      // Ipakita ang "wantedList" div
-      document.getElementById('wantedList').style.display = 'block';
+      // Show the "wantedList" div
+      const wantedList = document.getElementById('wantedList');
+      if (wantedList.style.display === 'none' || wantedList.style.display === '') {
+        wantedList.style.display = 'block'; // Show the div
+      } else {
+        wantedList.style.display = 'none'; // Toggle to hide again
+      }
     }
   </script>
 </body>

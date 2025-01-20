@@ -1,0 +1,76 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normies Squad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .wanted {
+      display: none; /* Nakatago ang images at description by default */
+      margin-top: 20px;
+    }
+
+    .wanted img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Normies Squad</h1>
+  <p>Click the button below to view the wanted list!</p>
+  <button onclick="showWantedList()">View Wanted List</button>
+
+  <!-- Wanted List -->
+  <div id="wantedList" class="wanted">
+    <div>
+      <img src="images/darwin.jpg" alt="Darwin">
+      <p class="description">Darwin: Pogi sa AICS Montalban</p>
+    </div>
+    <div>
+      <img src="images/vanong.jpg" alt="Vanong">
+      <p class="description">Vanong: Kalbo na pulis</p>
+    </div>
+  </div>
+
+  <script>
+    function showWantedList() {
+      // Ipakita ang "wantedList" div
+      document.getElementById('wantedList').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
